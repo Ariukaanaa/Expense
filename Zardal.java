@@ -1,12 +1,13 @@
 public class Zardal {
     
-    private static int id = 0  ; 
+    private static int id = 1  ; 
     private int zardal ; 
     private String nameOfZardal ; 
+    private int idExpense ; 
 
     public Zardal( int zardal , String nameOfZardal )
     {   
-        this.id += 1 ; 
+        idExpense = Zardal.id++ ;  
         this.zardal       = zardal ;
         this.nameOfZardal = nameOfZardal  ;  
     }
@@ -26,10 +27,11 @@ public class Zardal {
 
     public int    getZardal      () { return this.zardal       ;  }
     public String getNameOfZardal() { return this.nameOfZardal ;  }
+    public int    getIdExpense   () { return this.idExpense    ;  }
 
     public String toString()
     {
-        return this.nameOfZardal + "   :   " + this.zardal ; 
+        return " Number -> " + this.idExpense +  " | "  + this.nameOfZardal + "   :   " + this.zardal ; 
     }
 
 }

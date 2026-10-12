@@ -32,6 +32,21 @@ public class Secretary
         
     }
 
+    public void deleteById( int id )
+    {
+        Zardal element = null ; 
+        for( Zardal expense : liste )
+        {
+            if( expense.getIdExpense() == id  )
+            {
+                element = expense ;  
+                break ; 
+            }
+
+        }
+        if( element != null ) liste.remove(element) ; 
+    }
+
     public void viewExpense()
     {
         for( Zardal expense : liste )
